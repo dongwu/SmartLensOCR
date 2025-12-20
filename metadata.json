@@ -1,0 +1,5 @@
+{
+  "name": "Smart Lens OCR",
+  "description": "An interactive tool to selectively extract, reorder, and refine text from images using advanced vision AI.",
+  "requestFramePermissions": []
+}
