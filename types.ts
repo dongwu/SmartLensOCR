@@ -11,7 +11,7 @@ export interface TextRegion {
   box: BoundingBox;
   order: number;
   description: string;
-  extractedText?: string;
+  extractedText?: string; 
   isActive: boolean;
 }
 
@@ -22,4 +22,19 @@ export enum AppState {
   INTERACTING = 'INTERACTING',
   EXTRACTING = 'EXTRACTING',
   FINISHED = 'FINISHED'
+}
+
+export interface User {
+  id: string;
+  email: string;
+  credits: number;
+  isPro: boolean;
+}
+
+export interface PricingPlan {
+  id: string;
+  name: string;
+  price: string;
+  credits: number;
+  popular?: boolean;
 }

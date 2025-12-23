@@ -1,0 +1,16 @@
+
+{
+  "short_name": "SmartLens",
+  "name": "Smart Lens OCR Professional",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/1039/1039328.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#2563eb",
+  "background_color": "#ffffff"
+}
