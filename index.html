@@ -14,19 +14,38 @@
     <meta name="theme-color" content="#2563eb">
     <link rel="manifest" href="manifest.json">
     
+    <!-- App Icon for iOS -->
+    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/1039/1039328.png">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        
+        :root {
+            --safe-area-top: env(safe-area-inset-top);
+            --safe-area-bottom: env(safe-area-inset-bottom);
+        }
+
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f8fafc;
-            /* Support for iPhone safe areas (Notches) */
-            padding-top: env(safe-area-inset-top);
-            padding-bottom: env(safe-area-inset-bottom);
-        }
-        .ios-full-height {
+            /* Support for iPhone safe areas */
+            padding-top: var(--safe-area-top);
+            padding-bottom: var(--safe-area-bottom);
             height: 100vh;
-            height: -webkit-fill-available;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #root {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Prevents pull-to-refresh and elastic bounce on iOS standalone */
+        html, body {
+            overscroll-behavior-y: none;
         }
     </style>
 <script type="importmap">
@@ -40,7 +59,7 @@
 }
 </script>
 </head>
-<body class="ios-full-height overflow-x-hidden">
+<body>
     <div id="root"></div>
 </body>
 </html>
